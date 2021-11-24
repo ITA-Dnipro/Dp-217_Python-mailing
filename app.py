@@ -1,10 +1,11 @@
 from flask import Flask, render_template, url_for, request, Response
 from Schema import UserSchema
 from mail import Mail
+from configurations import secret_pass
 # from kafka import KafkaConsumer
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'qwemnb123098LKJH7654'
+app.config['SECRET_KEY'] = secret_pass
 
 
 @app.route('/')
